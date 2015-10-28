@@ -8,7 +8,7 @@ También hay diversos frameworks y librerías.
 
 Los frameworks suelen contarte cómo deben encajar las cosas al final. Hay que imaginarse uno mismo cómo llegar allí, los pasos previos y el andamiaje necesario.
 
-El objetivo de este proyecto es ilustrar una forma de hacer desarrollo web, un workflow básico, que puede funcionar para desarrollar proyectos iniciales en el mundo real.
+El objetivo de este proyecto es usar el conocido ejercicio de la lista de tareas para ilustrar una forma de hacer desarrollo web, un workflow básico, que puede funcionar para desarrollar proyectos iniciales en el mundo real.
 
 ## Tecnología
 
