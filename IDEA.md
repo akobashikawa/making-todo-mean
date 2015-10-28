@@ -13,7 +13,6 @@
 
 - Poder mostrar una lista de cosas
 
-
 ## Paso 2
 
 - Poder agregar un item
