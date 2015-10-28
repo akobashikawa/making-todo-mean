@@ -58,9 +58,9 @@
             <div class="form-group">
                 <label for="name" class="sr-only">Nuevo item</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Nuevo item">
+                    <input type="text" class="form-control" placeholder="Nuevo item" ng-model="newItem">
                     <span class="input-group-btn">
-                    <button type="button" class="btn btn-primary" aria-label="Agregar">
+                    <button type="button" class="btn btn-primary" aria-label="Agregar" ng-click="add()">
                       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                     </button>
                     </span>

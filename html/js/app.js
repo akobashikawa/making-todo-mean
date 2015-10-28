@@ -16,6 +16,10 @@
             'Item 4',
             'Item 5'
         ];
+
+        $scope.add = function() {
+            $scope.items.push($scope.newItem);
+        };
     }
 
 })();
