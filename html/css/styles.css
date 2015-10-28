@@ -1,3 +1,11 @@
 body {
   margin-top: 60px;
 }
+
+.task-text .task-text-input {
+    width: calc(100% - 20px);
+}
+
+.task-actions {
+    width: 130px;
+}

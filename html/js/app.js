@@ -10,11 +10,11 @@
         var todo = this;
 
         $scope.items = [
-            {id: 1, text: 'Item 1'},
-            {id: 2, text: 'Item 2'},
-            {id: 3, text: 'Item 3'},
-            {id: 4, text: 'Item 4'},
-            {id: 5, text: 'Item 5'}
+            {id: 1, text: 'Item 1', edit: false},
+            {id: 2, text: 'Item 2', edit: false},
+            {id: 3, text: 'Item 3', edit: false},
+            {id: 4, text: 'Item 4', edit: false},
+            {id: 5, text: 'Item 5', edit: false}
         ];
 
         todo.nextId = function () {
@@ -36,6 +36,15 @@
                 text: text
             });
         };
+
+        $scope.edit = function(item) {
+            item.edit = true;
+        };
+
+        $scope.save = function(item) {
+            item.edit = false;
+        };
+
     }
 
 })();
