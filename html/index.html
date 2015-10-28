@@ -29,7 +29,10 @@
     </nav>
     <div class="container" role="main">
         <p class="text-right">
-          <button class="btn btn-xs btn-success">Limpiar completados</button>
+          <button type="button" class="btn btn-xs btn-success" aria-label="Editar">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+            Limpiar completados
+          </button>
         </p>
         <table class="table table-striped table-hover">
           <tr>
@@ -139,7 +142,9 @@
                 <div class="input-group">
                   
                   <input type="text" class="form-control" placeholder="Nuevo item">
-                  <span class="input-group-btn"><button class="btn btn-primary">Agregar</button></span>
+                  <span class="input-group-btn"><button type="button" class="btn btn-primary" aria-label="Editar">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+              </button></span>
                   
                 </div>
             </div>
