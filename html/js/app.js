@@ -55,6 +55,12 @@
             }
         };
 
+        $scope.clearDone = function() {
+            $scope.items = $scope.items.filter(function(e) {
+                return !e.done;
+            });
+        };
+
     }
 
 })();
