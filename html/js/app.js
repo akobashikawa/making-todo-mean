@@ -45,6 +45,16 @@
             item.edit = false;
         };
 
+        $scope.delete = function(item) {
+            var items = $scope.items;
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].id === item.id) {
+                    items.splice(i, 1);
+                    return;
+                }
+            }
+        };
+
     }
 
 })();
