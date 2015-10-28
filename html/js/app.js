@@ -10,11 +10,11 @@
         var todo = this;
 
         $scope.items = [
-            {id: 1, text: 'Item 1', edit: false},
-            {id: 2, text: 'Item 2', edit: false},
-            {id: 3, text: 'Item 3', edit: false},
-            {id: 4, text: 'Item 4', edit: false},
-            {id: 5, text: 'Item 5', edit: false}
+            {id: 1, text: 'Item 1', edit: false, done: false},
+            {id: 2, text: 'Item 2', edit: false, done: false},
+            {id: 3, text: 'Item 3', edit: false, done: false},
+            {id: 4, text: 'Item 4', edit: false, done: false},
+            {id: 5, text: 'Item 5', edit: false, done: false}
         ];
 
         todo.nextId = function () {

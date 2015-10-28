@@ -34,9 +34,9 @@
             </button>
         </p>
         <table class="table table-striped table-hover">
-            <tr ng-repeat="item in items">
+            <tr ng-repeat="item in items" ng-class="{success:item.done}">
                 <td class="task-text">
-                    <input type="checkbox">
+                    <input type="checkbox" ng-model="item.done">
                     <span ng-hide="item.edit">{{ item.text }}</span>
                     <input type="text" class="task-text-input" ng-model="item.text" ng-show="item.edit">
                 </td>
