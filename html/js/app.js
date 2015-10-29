@@ -61,6 +61,19 @@
             });
         };
 
+        todo.sortItems = function() {
+            var items = $scope.items;
+            items.sort(function(a, b) {
+                if (a.order > b.order) {
+                    return 1;
+                }
+                if (a.order < b.order) {
+                    return -1;
+                }
+                return 0;
+            });
+        };
+
         $scope.up = function(item) {
             var items = $scope.items;
             for (var i = 0; i < items.length; i++) {
@@ -69,15 +82,7 @@
                         var order = items[i].order; 
                         items[i].order = items[i-1].order;
                         items[i-1].order = order;
-                        items.sort(function(a, b) {
-                            if (a.order > b.order) {
-                                return 1;
-                            }
-                            if (a.order < b.order) {
-                                return -1;
-                            }
-                            return 0;
-                        });
+                        todo.sortItems();
                         return;
                     }
                 }
@@ -92,15 +97,7 @@
                         var order = items[i].order; 
                         items[i].order = items[i+1].order;
                         items[i+1].order = order;
-                        items.sort(function(a, b) {
-                            if (a.order > b.order) {
-                                return 1;
-                            }
-                            if (a.order < b.order) {
-                                return -1;
-                            }
-                            return 0;
-                        });
+                        todo.sortItems();
                         return;
                     }
                 }
