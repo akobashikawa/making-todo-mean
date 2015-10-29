@@ -10,11 +10,11 @@
         var todo = this;
 
         $scope.items = [
-            {id: 1, text: 'Item 1', edit: false, done: false},
-            {id: 2, text: 'Item 2', edit: false, done: false},
-            {id: 3, text: 'Item 3', edit: false, done: false},
-            {id: 4, text: 'Item 4', edit: false, done: false},
-            {id: 5, text: 'Item 5', edit: false, done: false}
+            {id: 1, text: 'Item 1', order: 1, edit: false, done: false},
+            {id: 2, text: 'Item 2', order: 2, edit: false, done: false},
+            {id: 3, text: 'Item 3', order: 3, edit: false, done: false},
+            {id: 4, text: 'Item 4', order: 4, edit: false, done: false},
+            {id: 5, text: 'Item 5', order: 5, edit: false, done: false}
         ];
 
         todo.nextId = function () {
@@ -59,6 +59,29 @@
             $scope.items = $scope.items.filter(function(e) {
                 return !e.done;
             });
+        };
+
+        $scope.up = function(item) {
+            var items = $scope.items;
+            for (var i = 0; i < items.length; i++) {
+                if (items[i].id === item.id) {
+                    if (i > 0) {
+                        var order = items[i].order; 
+                        items[i].order = items[i-1].order;
+                        items[i-1].order = order;
+                        items.sort(function(a, b) {
+                            if (a.order > b.order) {
+                                return 1;
+                            }
+                            if (a.order < b.order) {
+                                return -1;
+                            }
+                            return 0;
+                        });
+                        return;
+                    }
+                }
+            }
         };
 
     }

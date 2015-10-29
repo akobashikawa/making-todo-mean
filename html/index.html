@@ -34,7 +34,7 @@
             </button>
         </p>
         <table class="table table-striped table-hover">
-            <tr ng-repeat="item in items" ng-class="{success:item.done}">
+            <tr ng-repeat="item in items | orderBy: order" ng-class="{success:item.done}">
                 <td class="task-text">
                     <input type="checkbox" ng-model="item.done">
                     <span ng-hide="item.edit">{{ item.text }}</span>
@@ -51,10 +51,10 @@
                     <button type="button" class="btn btn-xs btn-danger" aria-label="Eliminar" ng-click="delete(item)">
                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                     </button>
-                    <button type="button" class="btn btn-xs btn-default" aria-label="Más arriba">
+                    <button type="button" class="btn btn-xs btn-default" aria-label="Más arriba" ng-click="up(item)">
                         <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
                     </button>
-                    <button type="button" class="btn btn-xs btn-default" aria-label="Más abajo">
+                    <button type="button" class="btn btn-xs btn-default" aria-label="Más abajo" ng-click="down(item)">
                         <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </button>
                 </td>
